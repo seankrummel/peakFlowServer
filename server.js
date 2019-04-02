@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 // const cors = require('cors');
 const morgan = require('morgan');
 const {PORT} = require('./config');
+const {dbConnect} = require('./db-mongoose');
 
 const app = express();
 const jsonParser = bodyParser.json();
@@ -34,6 +35,7 @@ function runServer(port = PORT) {
 }
 
 if (require.main === module) {
+  dbConnect();
   runServer();
 }
 
