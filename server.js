@@ -1,9 +1,9 @@
 'use strict';
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors');
+// const cors = require('cors');
 const morgan = require('morgan');
-const {PORT, CLIENT_ORIGIN} = require('./config');
+const {PORT} = require('./config');
 
 const app = express();
 const jsonParser = bodyParser.json();
@@ -13,7 +13,7 @@ app.use(
     skip: (req, res) => process.env.NODE_ENV === 'test'
   })
 );
-app.use(cors({origin: CLIENT_ORIGIN}));
+// app.use(cors({origin: CLIENT_ORIGIN}));
 app.use(jsonParser);
 
 app.use((req, res) => {
