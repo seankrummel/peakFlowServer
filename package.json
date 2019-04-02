@@ -1,0 +1,13 @@
+{
+  "name": "peak-flow-backend",
+  "description": "Express server for peak-flow app",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.4.21",
+    "morgan": "^1.9.1"
+  }
+}

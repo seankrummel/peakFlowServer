@@ -27,7 +27,7 @@ app.use((err, req, res, next) => {
 });
 
 function runServer(port = PORT) {
-  const server = app.listen(port, () => console.info(`App listening on ${this.address().port}`))
+  const server = app.listen(port, () => console.info(`App listening on ${server.address().port}`))
     .on('error', err => {
       console.error('Express failed to start');
       console.error(err);
